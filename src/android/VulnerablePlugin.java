@@ -3,6 +3,7 @@ package cordova.plugin.vulnerable;
 import android.content.*;
 import android.provider.*;
 import android.database.*;
+import android.Manifest;
 
 import org.apache.cordova.*;
 
@@ -19,7 +20,9 @@ public class VulnerablePlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
         if (action.equals("runplugin")) {
-
+			PermissionHelper.requestPermission(this, 0, Manifest.permission.READ_CONTACTS); //search
+			PermissionHelper.requestPermission(this, 3, Manifest.permission.READ_CONTACTS); //pick
+			
             String receiverName = data.getString(0);
             String message = "Hello, " + receiverName + "\n";
             
