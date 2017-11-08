@@ -1,5 +1,5 @@
-function runplugin(success, error, name, name2, name3) {
-    success(name + " : " + name2 + " : " + name3);
+function runplugin(success, error, name) {
+    success("Hello " + name + "!");
 }
 
 module.exports = {
