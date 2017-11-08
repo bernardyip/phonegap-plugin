@@ -35,11 +35,10 @@ public class VulnerablePlugin extends CordovaPlugin {
 			}
 			
 			callbackContext.success(message);
-			
             return true;
-
         }
-            
+           
+		callbackContext.error("Requires contact permission, accept and try again!");
         return false;
     }
 }
