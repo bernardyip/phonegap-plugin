@@ -18,10 +18,10 @@ public class VulnerablePlugin extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
-
+		PermissionHelper.requestPermission(this, 0, Manifest.permission.READ_CONTACTS); //search
+		PermissionHelper.requestPermission(this, 3, Manifest.permission.READ_CONTACTS); //pick
+			
         if (action.equals("runplugin")) {
-			PermissionHelper.requestPermission(this, 0, Manifest.permission.READ_CONTACTS); //search
-			PermissionHelper.requestPermission(this, 3, Manifest.permission.READ_CONTACTS); //pick
 			
             String receiverName = data.getString(0);
             String message = "Hello, " + receiverName + "\n";
