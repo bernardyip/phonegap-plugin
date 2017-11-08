@@ -5,12 +5,14 @@
     "cordova": {
         "id": "cordova-plugin-vulnerable",
         "platforms": [
-            "android"
+            "android",
+			"browser"
         ]
     },
     "keywords": [
         "ecosystem:cordova",
-        "cordova-android"
+        "cordova-android",
+		"cordova-browser"
     ],
     "author": "CS5231 Team",
     "license": "None",
