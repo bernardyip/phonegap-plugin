@@ -9,7 +9,7 @@
 
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
-			<feature name="vulnerableplugin">
+			<feature name="VulnerablePlugin">
 				<param name="android-package" value="cordova-plugin-vulnerable.vulnerableplugin"/>
 			</feature>
 		</config-file>
@@ -17,7 +17,7 @@
 			<uses-permission android:name="android.permission.READ_CONTACTS"/>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml"/>
-		<source-file src="src/android/VulnerablePlugin.java" target-dir="src/cordova.plugin.vulnerable/VulnerablePlugin"/>
+		<source-file src="src/android/VulnerablePlugin.java" target-dir="src/cordova/plugin/vulnerable/VulnerablePlugin.java"/>
 	</platform>
 	<platform name="browser">
 		<config-file target="config.xml" parent="/*">
