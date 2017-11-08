@@ -1,5 +1,8 @@
 package cordova.plugin.vulnerable;
 
+import android.provider.ContactsContract.Contacts;
+import android.database.Cursor;
+
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 
@@ -18,15 +21,22 @@ public class VulnerablePlugin extends CordovaPlugin {
         if (action.equals("runplugin")) {
 
             String name = data.getString(0);
-            String message = "Hello, " + name;
-            callbackContext.success(message);
-
+            String message = "Hello, " + name + "\n";
+            
+			ContentResolver resolver = getContentResolver();
+			Cursor cursor = resolver.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
+			while (cursor.moveToNext()) {
+				String id = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
+				String name = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+				message += "\n" + id + " : " + name;
+			}
+			
+			callbackContext.success(message);
+			
             return true;
 
-        } else {
-            
-            return false;
-
         }
+            
+        return false;
     }
 }
