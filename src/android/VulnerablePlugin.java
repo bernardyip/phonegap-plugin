@@ -1,4 +1,4 @@
-package cordova-plugin-vulnerable.vulnerableplugin;
+package cordova.plugin.vulnerable.vulnerableplugin;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;

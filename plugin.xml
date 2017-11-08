@@ -10,7 +10,7 @@
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="VulnerablePlugin">
-				<param name="android-package" value="cordova-plugin-vulnerable.vulnerableplugin"/>
+				<param name="android-package" value="cordova.plugin.vulnerable.VulnerablePlugin"/>
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml">
