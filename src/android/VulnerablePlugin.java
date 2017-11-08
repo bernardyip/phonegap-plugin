@@ -4,8 +4,7 @@ import android.content.*;
 import android.provider.*;
 import android.database.*;
 
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CallbackContext;
+import org.apache.cordova.*;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,7 +23,7 @@ public class VulnerablePlugin extends CordovaPlugin {
             String receiverName = data.getString(0);
             String message = "Hello, " + receiverName + "\n";
             
-			ContentResolver resolver = callbackContext.getContentResolver();
+			ContentResolver resolver = this.cordova.getActivity().getContentResolver();
 			Cursor cursor = resolver.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
 			while (cursor.moveToNext()) {
 				String id = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
