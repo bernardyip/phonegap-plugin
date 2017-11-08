@@ -12,5 +12,9 @@
     "cordova-android"
   ],
   "author": "CS5231 Team",
-  "license": "None"
+  "license": "None",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bernardyip/phonegap-plugin.git"
+  },
 }
