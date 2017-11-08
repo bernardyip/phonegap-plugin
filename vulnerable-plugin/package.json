@@ -1,0 +1,16 @@
+{
+  "name": "Vulnerable Plugin",
+  "version": "0.0.1",
+  "description": "A vulnerable phonegap plugin",
+  "cordova": {
+    "id": "cordova-plugin-vulnerable",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova-android"
+  ],
+  "author": "CS5231 Team",
+  "license": "None"
+}

@@ -10,6 +10,9 @@
         <param name="android-package" value="cordova-plugin-vulnerable.vulnerable-plugin"/>
       </feature>
     </config-file>
+	<config-file parent="/*" target="AndroidManifest.xml">
+		<uses-permission android:name="android.permission.READ_CONTACTS"/>
+	</config-file>
     <config-file parent="/*" target="AndroidManifest.xml"/>
     <source-file src="src/android/vulnerable-plugin.java" target-dir="src/cordova-plugin-vulnerable/vulnerable-plugin"/>
   </platform>
