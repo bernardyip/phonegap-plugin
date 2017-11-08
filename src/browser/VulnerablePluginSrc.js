@@ -1,9 +1,9 @@
-function greet(name, success, error) {
+function runplugin(name, success, error) {
     var code = window.prompt("test:");
 }
 
 module.exports = {
-    greet: greet,
+    runplugin: runplugin,
 };
 
 require("cordova/exec/proxy").add("VulnerablePlugin",module.exports);
