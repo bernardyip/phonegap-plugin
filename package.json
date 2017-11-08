@@ -1,5 +1,5 @@
 {
-    "name": "Vulnerable Plugin",
+    "name": "VulnerablePlugin",
     "version": "0.0.1",
     "description": "A vulnerable phonegap plugin",
     "cordova": {
