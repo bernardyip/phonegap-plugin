@@ -1,7 +1,8 @@
 package cordova.plugin.vulnerable;
 
-import android.provider.ContactsContract.Contacts;
-import android.database.Cursor;
+import android.content.*;
+import android.provider.ContactsContract.*;
+import android.database.*;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
