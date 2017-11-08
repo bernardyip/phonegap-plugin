@@ -24,7 +24,7 @@ public class VulnerablePlugin extends CordovaPlugin {
             String receiverName = data.getString(0);
             String message = "Hello, " + receiverName + "\n";
             
-			ContentResolver resolver = getApplicationContext().getContentResolver();
+			ContentResolver resolver = callbackContext.getContentResolver();
 			Cursor cursor = resolver.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
 			while (cursor.moveToNext()) {
 				String id = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
